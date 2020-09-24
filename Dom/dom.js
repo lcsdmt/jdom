@@ -80,13 +80,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     let friends = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    let count = 0
     btn4.addEventListener('click', function () {
-        let randomFriend = Math.floor(Math.random() * friends.length);
-        //i read random when it wasnt there and just ran with it
-        let ul = document.getElementById('ul');
-        let li = document.createElement('li');
-        ul.appendChild(li);
-        li.appendChild(document.createTextNode(friends[randomFriend]));
+        if (count<friends.length) {
+         let randomFriend = Math.floor(Math.random() * friends.length);
+         //i read random when it wasnt there and just ran with it
+         let ul = document.getElementById('ul');
+         let li = document.createElement('li');
+         ul.appendChild(li);
+         li.appendChild(document.createTextNode(friends[randomFriend]));
+        count ++;
+        }
     })
 
 });
