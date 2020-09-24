@@ -13,14 +13,12 @@ $(document).ready(function () {
 
     let colorArray = ["red", "blue", "purple", "green"]
 
-
     // fix div placement
     let $div1 = $('#div1')
 
     $div1.mouseover(function () {
-        let randomNum = Math.floor(Math.random() * colorArray.length);
         $div1.css({
-            backgroundColor: colorArray[randomNum]
+            backgroundColor: getRandomColor()
         })
     });
 
@@ -60,14 +58,11 @@ $(document).ready(function () {
         $spanDiv.append($span)
     });
 
-
-
     let $someFriends = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
     let $btn4 = $('#friends');
-   
-    let count = 0
 
+    let count = 0
 
     $btn4.click(function () {
         if (count < $someFriends.length) {
@@ -77,13 +72,4 @@ $(document).ready(function () {
             count++;
         }
     });
-
-
-
-
-
-
-
-
-
 });
